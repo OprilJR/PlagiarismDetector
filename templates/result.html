@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Comparison Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+        {% endif %}
+
+        {% if comparison_result %}
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg mt-6">
+            <h2 class="text-2xl">{{ comparison_result }}</h2>
+            <p class="mt-2"><strong>Reference File SHA-256:</strong> {{ ref_sha256 }}</p>
+            <p class="mt-2"><strong>Student File SHA-256:</strong> {{ stu_sha256 }}</p>
+        </div>
+        {% endif %}
+
+        <div class="mt-6 text-center">
+            <a href="/" class="bg-indigo-600 hover:bg-indigo-700 py-2 px-4 rounded text-xl">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
